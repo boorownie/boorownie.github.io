@@ -1,0 +1,33 @@
+# Site settings
+title:          맨땅에 코딩
+description:
+url:            https://boorownie.github.io
+
+# Google Analytics
+#google_analytics: UA—XXXXXXXX-X
+
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
+
+# Disqus (Set to your disqus id)
+#disqus:         jekyll-tale
+
+theme:      tale

@@ -1,0 +1,15 @@
+### Intellij ###
+# User-specific stuff
+.idea/
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
