@@ -30,4 +30,4 @@ paginate:       5
 # Disqus (Set to your disqus id)
 #disqus:         jekyll-tale
 
-theme:      tale
+theme:      jekyll-theme-minimal
