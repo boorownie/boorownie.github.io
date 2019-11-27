@@ -5,7 +5,7 @@ author: "Boorownie"
 tags: ["ATDD", "Spring", "Spring Boot"]
 ---
 
-<!-- ![](https://images.squarespace-cdn.com/content/v1/5bcdd76a81551217e12a7a2b/1541601663984-RX2K7WRMXZTYY4PGU9AE/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyD4IQ_uEhoqbBUjTJFcqKvko9JlUzuVmtjr1UPhOA5qkTLSJODyitRxw8OQt1oetw/Hindsight_Outside+in+Development.png){: width="60%" height="60%"} -->
+![](https://images.squarespace-cdn.com/content/v1/5bcdd76a81551217e12a7a2b/1541601663984-RX2K7WRMXZTYY4PGU9AE/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyD4IQ_uEhoqbBUjTJFcqKvko9JlUzuVmtjr1UPhOA5qkTLSJODyitRxw8OQt1oetw/Hindsight_Outside+in+Development.png){: width="60%" height="60%"}
 
 TDD를 배우면서 도메인에 먼저 집중하여 도메인 기능의 테스트 코드를 구현한 후 기능을 구현하는 방법으로 학습합니다.
 한 번에 한 가지를 집중하고 각 도메인들은 애플리케이션이 구성되기 전에 작성됩니다.
