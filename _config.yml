@@ -1,10 +1,11 @@
 # Site settings
 title:          맨땅에 코딩
 description:
-url:            https://boorownie.github.io
+url: https://boorownie.github.io
+author: Boorownie
 
 # Google Analytics
-#google_analytics: UA—XXXXXXXX-X
+google_analytics: UA-147207658-1
 
 # Build settings
 markdown:       kramdown
@@ -29,5 +30,3 @@ paginate:       5
 
 # Disqus (Set to your disqus id)
 #disqus:         jekyll-tale
-
-theme:      jekyll-theme-minimal

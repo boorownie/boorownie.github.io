@@ -16,8 +16,8 @@
   <!--&lt;!&ndash; RSS &ndash;&gt;-->
   <!--{% feed_meta %}-->
 
-  <!--&lt;!&ndash; Google Analytics&ndash;&gt;-->
-  <!--{% if site.google_analytics and jekyll.environment == 'production' %}-->
-  <!--{% include analytics.html %}-->
-  <!--{% endif %}-->
+  <!-- Google Analytics-->
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
 </head>
