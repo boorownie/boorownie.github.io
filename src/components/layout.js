@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
             src
             alt
           }
+          image
           logoText
           defaultTheme
           copyrights
