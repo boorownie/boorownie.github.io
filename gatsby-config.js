@@ -11,6 +11,7 @@ module.exports = {
     description: `boorownie's blog`,
     copyrights: "",
     author: `Boorownie`,
+    image: "src/images/logo.png",
     logo: {
       src: "",
       alt: "",

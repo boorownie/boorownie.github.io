@@ -48,6 +48,10 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `src/images/logo.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
