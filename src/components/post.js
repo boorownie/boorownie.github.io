@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import Navigation from './navigation'
-import { toKebabCase } from '../helpers'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
+import Navigation from "./navigation";
+import { toKebabCase } from "../helpers";
 
-import style from '../styles/post.module.css'
+import style from "../styles/post.module.css";
 
 const Post = ({
   title,
@@ -15,14 +15,15 @@ const Post = ({
   author,
   excerpt,
   tags,
+  series,
   html,
   previousPost,
   nextPost,
 }) => {
-  const previousPath = previousPost && previousPost.frontmatter.path
-  const previousLabel = previousPost && previousPost.frontmatter.title
-  const nextPath = nextPost && nextPost.frontmatter.path
-  const nextLabel = nextPost && nextPost.frontmatter.title
+  const previousPath = previousPost && previousPost.frontmatter.path;
+  const previousLabel = previousPost && previousPost.frontmatter.title;
+  const nextPath = nextPost && nextPost.frontmatter.path;
+  const nextLabel = nextPost && nextPost.frontmatter.title;
 
   return (
     <div className={style.post}>
@@ -43,23 +44,57 @@ const Post = ({
           ) : null}
         </div>
 
-        {coverImage && (
+        {excerpt ? (
+          <></>
+        ) : (
+          series && (
+            <div className={style.series}>
+              {series.map((item, index) =>
+                item.path ? (
+                  <Link to={item.path} key={index}>
+                    {item.path === path ? (
+                      <span className={style.seriesItemBold}>{item.title}</span>
+                    ) : (
+                      <span className={style.seriesItem}>{item.title}</span>
+                    )}
+                  </Link>
+                ) : (
+                  <span key={index} className={style.seriesItem}>
+                    {item.title}
+                  </span>
+                ),
+              )}
+            </div>
+          )
+        )}
+
+        {coverImage ? (
           <Img
             fluid={coverImage.childImageSharp.fluid}
             className={style.coverImage}
           />
+        ) : (
+          <p>{excerpt}</p>
         )}
 
         {excerpt ? (
           <>
-            <p>{excerpt}</p>
-            <Link to={path} className={style.readMore}>
-              Read more →
-            </Link>
+            {/*<p>{excerpt}</p>*/}
+            {/*<Link to={path} className={style.readMore}>*/}
+            {/*  Read more →*/}
+            {/*</Link>*/}
           </>
         ) : (
           <>
             <div dangerouslySetInnerHTML={{ __html: html }} />
+            <script
+              src="https://utteranc.es/client.js"
+              repo="boorownie/blog-comment"
+              issue-term="pathname"
+              theme="github-light"
+              crossOrigin="anonymous"
+              async
+            ></script>
             <Navigation
               previousPath={previousPath}
               previousLabel={previousLabel}
@@ -70,8 +105,8 @@ const Post = ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 Post.propTypes = {
   title: PropTypes.string,
@@ -82,8 +117,9 @@ Post.propTypes = {
   excerpt: PropTypes.string,
   html: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
+  series: PropTypes.arrayOf(PropTypes.object),
   previousPost: PropTypes.object,
   nextPost: PropTypes.object,
-}
+};
 
-export default Post
+export default Post;

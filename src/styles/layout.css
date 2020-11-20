@@ -17,7 +17,6 @@ body {
   padding: 0;
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
   line-height: 1.54;
   background-color: var(--light-background);
   color: var(--light-color);
@@ -330,4 +329,9 @@ footer {
       }
     }
   }
+}
+
+.gatsby-resp-image-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

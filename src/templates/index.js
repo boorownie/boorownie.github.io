@@ -27,6 +27,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               coverImage,
               excerpt,
               tags,
+              series,
             },
           } = node
 
@@ -39,6 +40,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               author={author}
               coverImage={coverImage}
               tags={tags}
+              series={series}
               excerpt={excerpt || autoExcerpt}
             />
           )
@@ -82,6 +84,10 @@ export const postsQuery = graphql`
             author
             excerpt
             tags
+            series {
+              title
+              path
+            }
             coverImage {
               childImageSharp {
                 fluid(maxWidth: 800) {

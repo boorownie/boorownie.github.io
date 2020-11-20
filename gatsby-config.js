@@ -1,37 +1,33 @@
-const postCssPresetEnv = require(`postcss-preset-env`)
-const postCSSNested = require('postcss-nested')
-const postCSSUrl = require('postcss-url')
-const postCSSImports = require('postcss-import')
-const cssnano = require('cssnano')
-const postCSSMixins = require('postcss-mixins')
+const postCssPresetEnv = require(`postcss-preset-env`);
+const postCSSNested = require("postcss-nested");
+const postCSSUrl = require("postcss-url");
+const postCSSImports = require("postcss-import");
+const cssnano = require("cssnano");
+const postCSSMixins = require("postcss-mixins");
 
 module.exports = {
   siteMetadata: {
-    title: `Hello Friend`,
-    description: `A simple starter for Gatsby. That's it.`,
-    copyrights: '',
-    author: `@panr`,
+    title: `맨땅에 코딩`,
+    description: `boorownie's blog`,
+    copyrights: "",
+    author: `Boorownie`,
     logo: {
-      src: '',
-      alt: '',
+      src: "",
+      alt: "",
     },
-    logoText: 'hello friend',
-    defaultTheme: 'dark',
+    logoText: "맨땅에 코딩",
+    defaultTheme: "dark",
     postsPerPage: 5,
     showMenuItems: 2,
-    menuMoreText: 'Show more',
+    menuMoreText: "Show more",
     mainMenu: [
+      // {
+      //   title: 'About',
+      //   path: '/about',
+      // },
       {
-        title: 'About',
-        path: '/about',
-      },
-      {
-        title: 'Showcase',
-        path: '/showcase',
-      },
-      {
-        title: 'Example',
-        path: '/example',
+        title: "Gitgub",
+        path: "https://github.com/boorownie",
       },
     ],
   },
@@ -68,12 +64,12 @@ module.exports = {
           postCSSMixins(),
           postCSSNested(),
           postCssPresetEnv({
-            importFrom: 'src/styles/variables.css',
+            importFrom: "src/styles/variables.css",
             stage: 1,
             preserve: false,
           }),
           cssnano({
-            preset: 'default',
+            preset: "default",
           }),
         ],
       },
@@ -85,7 +81,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-embed-video',
+            resolve: "gatsby-remark-embed-video",
             options: {
               related: false,
               noIframeBorder: true,
@@ -101,7 +97,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
@@ -115,13 +111,13 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-hello-friend`,
-        short_name: `hello-friend`,
+        short_name: `맨땅에 코딩`,
         start_url: `/`,
         background_color: `#292a2d`,
         theme_color: `#292a2d`,
         display: `minimal-ui`,
-        icon: `src/images/hello-icon.png`,
+        icon: `src/images/logo.png`,
       },
     },
   ],
-}
+};

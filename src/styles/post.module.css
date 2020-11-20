@@ -35,7 +35,7 @@
 .coverImage {
   border-radius: 8px;
   margin-bottom: 40px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .meta {
@@ -45,12 +45,46 @@
 
 .tags {
   margin-top: 10px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .tag {
   display: inline-block;
   margin-right: 10px;
+}
+
+.series {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 4px 0px;
+  position: relative;
+  background: var(--light-background-secondary);
+
+  :global .dark-theme :local & {
+    background: var(--dark-background-secondary);
+  }
+}
+
+.series-item {
+  display: block;
+}
+
+.series-item-bold {
+  display: block;
+  color: #fe5186;
+}
+
+.series a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.series span {
+  text-decoration: none;
 }
 
 .readMore {
@@ -63,4 +97,8 @@
 
 .postContent {
   position: relative;
+  h2,
+  h3 {
+    padding-top: 2rem;
+  }
 }

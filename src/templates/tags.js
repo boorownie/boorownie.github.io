@@ -36,6 +36,7 @@ const Tags = ({
               coverImage,
               excerpt,
               tags,
+              series,
             },
           } = node
 
@@ -47,6 +48,7 @@ const Tags = ({
               path={path}
               author={author}
               tags={tags}
+              series={series}
               coverImage={coverImage}
               excerpt={excerpt || autoExcerpt}
             />
@@ -91,6 +93,10 @@ export const postsQuery = graphql`
             author
             excerpt
             tags
+            series {
+              title
+              path
+            }
             coverImage {
               childImageSharp {
                 fluid(maxWidth: 800) {
